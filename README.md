@@ -1,27 +1,24 @@
-# Todomvc
+## Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+ng new todomvc
 
-## Development server
+yarn add todomvc-app-css
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng g class models/todo
 
-## Code scaffolding
+ng g service services/todo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Backend Django DRF API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+python3 -mvenv env
 
-## Running unit tests
+source env/bin/activate
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+pip install django djangorestframework django-cors-headers
 
-## Running end-to-end tests
+django-admin startproject backend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+cd backend
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+./manage.py startapp todos
