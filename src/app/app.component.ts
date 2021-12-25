@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from './models/todo';
 import { TodoService } from './services/todo.service';
 
 @Component({
@@ -14,5 +15,9 @@ export class AppComponent {
   addTodo() {
     this.todoService.addTodoText(this.newTodoText);
     this.newTodoText = '';
+  }
+
+  editTodo(todo: Todo) {
+    todo.editing = true;
   }
 }

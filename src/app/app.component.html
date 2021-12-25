@@ -21,7 +21,7 @@
           <input type="checkbox" class="toggle"
             (click)="todoService.toggleCompletion(todo)"
             [checked]="todo.completed">
-          <label (dbclick)="todo.editing=true">{{ todo.title }}</label>
+          <label (dblclick)="editTodo(todo)">{{ todo.title }}</label>
           <button class="destroy" (click)="todoService.removeTodo(todo)"></button>
         </div>
         <input type="text" class="edit"

@@ -1,19 +1,14 @@
 export class Todo {
+    title: string;
+    pk: number;
     completed: boolean;
     editing: boolean;
 
-    private _title: string = "";
-    get title() {
-        return this._title;
-    }
-    set title(value: string) {
-        this._title = value.trim();
-    }
-
-    constructor(title: string) {
-        this.completed = false;
-        this.editing = false;
+    constructor(title: string, pk: number = 0, completed: boolean = false) {
+        this.pk = pk;
         this.title = title;
+        this.completed = completed;
+        this.editing = false;
     }
 }
 
